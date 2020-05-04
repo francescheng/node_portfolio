@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 const path = require('path');
 
 module.exports = {
@@ -9,8 +10,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.m?js$/,
-        exclude: /(node_modules)/,
+        test: /\.(js|jsx)$/, ///\.m?js$/,
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -19,6 +20,9 @@ module.exports = {
         }
       }
     ]
+  },
+  resolve: {
+    extensions: ['*', '.js', '.jsx']
   }
 };
 
