@@ -4,10 +4,17 @@ import {render} from 'react-dom';
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <h1>New Component</h1>
+      <div className="App">
+        <div className="navigation">
+          {/* <img src={logo} className="logo" alt="Logo Image" /> */}
+          <div className="navigation-sub">
+            <a href="" className="item">Projects</div>
+            <a href="" className="item">Articles</div>
+            <a href="" className="item">Contact</div>
+          </div>
+        </div>
       </div>
-    )
+    );
   }
 }
 
