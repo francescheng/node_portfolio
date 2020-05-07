@@ -1,9 +1,9 @@
 import React from 'react';
 import {render} from 'react-dom';
-import Logo from '/assets/logo.png'
-console.log(logo);
 
 import { BrowserRouter, Route, Link } from 'react-router-dom';
+import logo from './assets/images/logo.png';
+console.log(logo);
 import Projects from './projects.jsx';
 import Contact from './contact.jsx';
 import About from './about.jsx';
@@ -19,13 +19,6 @@ class App extends React.Component {
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
 
-          <div className="header">
-          const icon = new Image();
-          icon.src = Logo;
-
-            <img src={Logo} className="logo-image" alt="Logo Image" />
-          </div>
-
           <div className="navigation">
             <div className="navigation-sub">
 
@@ -33,6 +26,11 @@ class App extends React.Component {
               <Link to="/" className="item">Projects</Link>
               <Link to="/about" className="item">About</Link>
               <Link to="/contact" className="item">Contact</Link>
+
+          <div className="header">
+
+            <img src={require('./assets/images/logo.png')} className="logo-image" alt="Logo Image" />
+          </div>
 
             </div>
           </div>
