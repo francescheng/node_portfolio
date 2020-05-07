@@ -18,11 +18,25 @@ module.exports = {
             presets: ['@babel/preset-react']
           }
         }
-      }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ],
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader',
+        ],
+      },
     ]
   },
   resolve: {
     extensions: ['*', '.js', '.jsx']
-  }
+  },
+  watch: true
 };
 
