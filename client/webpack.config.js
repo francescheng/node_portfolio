@@ -5,6 +5,7 @@ module.exports = {
   entry: './src/app.jsx',
   output: {
     path: path.resolve(__dirname, '../api/public/javascripts'),
+    publicPath: "/javascripts",
     filename: 'webpack.bundle.js'
   },
   module: {
@@ -30,10 +31,10 @@ module.exports = {
         test: /\.(png|svg|jpg|gif)$/i,
         use: [
              {
-            loader: 'file-loader',
-            options: {
-              esModule: false,
-            },
+            loader: "file-loader?name=/app/images/[name].[ext]",
+            // options: {
+            //   esModule: false,
+            // },
           },
         ],
       },

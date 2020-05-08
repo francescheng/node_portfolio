@@ -2,8 +2,8 @@ import React from 'react';
 import {render} from 'react-dom';
 
 import { BrowserRouter, Route, Link } from 'react-router-dom';
-import logo from './assets/images/logo.png';
-
+import Logo from './assets/images/logo.png';
+console.log(Logo);
 import Projects from './projects.jsx';
 import Contact from './contact.jsx';
 import About from './about.jsx';
@@ -17,7 +17,8 @@ class App extends React.Component {
           {/* Set up the Router*/}
           <div className="header">
 
-            <img src={require('./assets/images/logo.png')} className="logo-image" alt="Logo Image" />
+            <img src={Logo} className="logo-image" alt="Logo Image" />
+
           </div>
           <Route exact path="/" component={Projects} />
           <Route path="/about" component={About} />
