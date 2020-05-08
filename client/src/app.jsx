@@ -3,11 +3,10 @@ import {render} from 'react-dom';
 
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import Logo from './assets/images/logo.png';
-console.log(Logo);
 import Projects from './projects.jsx';
 import Contact from './contact.jsx';
 import About from './about.jsx';
-import './app.scss';
+import './stylesheets/app.scss';
 
 class App extends React.Component {
   render() {
