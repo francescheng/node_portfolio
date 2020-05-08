@@ -27,9 +27,14 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|svg|jpg|gif)$/i,
         use: [
-          'file-loader',
+             {
+            loader: 'file-loader',
+            options: {
+              esModule: false,
+            },
+          },
         ],
       },
     ]

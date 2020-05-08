@@ -3,7 +3,7 @@ import {render} from 'react-dom';
 
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import logo from './assets/images/logo.png';
-console.log(logo);
+
 import Projects from './projects.jsx';
 import Contact from './contact.jsx';
 import About from './about.jsx';
@@ -15,6 +15,10 @@ class App extends React.Component {
       <BrowserRouter>
         <div className="App">
           {/* Set up the Router*/}
+          <div className="header">
+
+            <img src={require('./assets/images/logo.png')} className="logo-image" alt="Logo Image" />
+          </div>
           <Route exact path="/" component={Projects} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
@@ -27,10 +31,6 @@ class App extends React.Component {
               <Link to="/about" className="item">About</Link>
               <Link to="/contact" className="item">Contact</Link>
 
-          <div className="header">
-
-            <img src={require('./assets/images/logo.png')} className="logo-image" alt="Logo Image" />
-          </div>
 
             </div>
           </div>
