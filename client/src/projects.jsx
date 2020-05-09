@@ -9,7 +9,21 @@ function Projects(props) {
       <Thumbnail
       link=""
       image=""
-      title=""
+      project-title="Clarify"
+      category=""
+      />
+
+      <Thumbnail
+      link=""
+      image=""
+      title="Matchbox"
+      category=""
+      />
+
+      <Thumbnail
+      link=""
+      image=""
+      title="Amibot"
       category=""
       />
     </div>
